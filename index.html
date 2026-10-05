@@ -141,7 +141,7 @@ body{background:#EFE9DE;color:var(--ink);font-family:var(--body);
 .closing .pic img{width:100%;height:100%;object-fit:cover;object-position:50% 80%;display:block;}
 .closing .pic::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:46%;
   background:linear-gradient(180deg,rgba(252,249,244,0),var(--paper) 94%);}
-.closing .cap{position:relative;z-index:2;text-align:center;padding:8px 30px 62px;margin-top:-34px;}
+.closing .cap{position:relative;z-index:2;text-align:center;padding:8px 30px 62px;margin-top:32px;margin-top:clamp(14px,4.5svh,40px);}
 .closing .q{font-family:var(--display);font-size:16px;line-height:2.2;color:#3B372F;}
 .closing .sig{font-family:var(--latin);font-style:italic;font-size:27px;color:var(--sage);margin-top:22px;}
 .closing .date{font-family:var(--latin);font-size:12px;letter-spacing:.3em;color:var(--soft);margin-top:12px;}
