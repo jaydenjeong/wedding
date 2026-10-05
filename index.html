@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>정우정 &#9829; 양유지 Wedding Party</title>
-<meta name="theme-color" content="#FCF9F4">
+<meta name="theme-color" content="#0E1A30">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Wedding Party">
 <meta property="og:title" content="정우정 &#9829; 양유지 Wedding Party">
@@ -196,6 +196,81 @@ body{background:#EFE9DE;color:var(--ink);font-family:var(--body);
   *{animation:none!important;transition:none!important;}
   .anim{opacity:1;transform:none;}
 }
+</style>
+<style id="navy-theme">
+/* 밤의 웨딩 파티: 깊은 남색 바탕 + 샴페인 골드 포인트, 몇 군데만 반짝임 */
+:root{
+  --paper:#0E1A30; --paper2:#13223D; --ink:#EEE7D7;
+  --soft:#9BA4B9; --sage:#D2B679; --line:rgba(210,182,121,.22);
+  --gold-hi:#F7E9C1; --gold-lo:#A8873F; --night:#070E1C;
+  color-scheme:dark;
+}
+body{background:var(--night);}
+.frame{box-shadow:0 0 60px rgba(0,0,0,.55);}
+/* 아주 옅은 별 가루 */
+.card{background-color:var(--paper);
+  background-image:
+    radial-gradient(1px 1px at 18% 22%,rgba(247,233,193,.35),transparent 60%),
+    radial-gradient(1px 1px at 72% 12%,rgba(247,233,193,.28),transparent 60%),
+    radial-gradient(1.2px 1.2px at 86% 64%,rgba(247,233,193,.3),transparent 60%),
+    radial-gradient(1px 1px at 34% 78%,rgba(247,233,193,.22),transparent 60%),
+    radial-gradient(1px 1px at 58% 46%,rgba(247,233,193,.18),transparent 60%);
+  background-size:260px 340px;}
+.card.tinted{background-color:var(--paper2);}
+
+.cover .photo::after{background:linear-gradient(180deg,rgba(14,26,48,0),rgba(14,26,48,.93) 62%,var(--paper) 100%);}
+.closing .pic::after{background:linear-gradient(180deg,rgba(14,26,48,0),var(--paper) 94%);}
+
+.invite p,.closing .q{color:#DCD5C6;}
+.detail dd,.acc-num{color:var(--ink);}
+.gal-hint{color:var(--soft);}
+.tile{background:var(--paper2);}
+
+.map-btns a,.map-btns button,.acc-copy{background:rgba(255,255,255,.04);color:var(--ink);border-color:var(--line);}
+.map-btns button:active,.acc-copy:active{background:rgba(210,182,121,.14);}
+
+.tl::before{background:var(--line);}
+.tl-item::before{background:var(--paper);border-color:rgba(210,182,121,.5);}
+.tl-item.key::before{background:var(--gold-hi);border-color:var(--gold-hi);
+  box-shadow:0 0 6px 1px rgba(247,233,193,.7),0 0 16px 3px rgba(210,182,121,.35);
+  animation:glow 2.8s ease-in-out infinite;}
+
+.dots i{background:rgba(238,231,215,.22);}
+.dots i.on{background:var(--sage);box-shadow:0 0 6px rgba(247,233,193,.6);}
+.arw,.lb .x,.lb .nav{color:var(--ink);}
+.bgm{background:rgba(14,26,48,.72);}
+.lb{background:rgba(7,14,28,.97);}
+.toast{background:var(--sage);color:var(--night);}
+.mark{background:var(--gold-hi);box-shadow:0 0 8px 2px rgba(247,233,193,.55);animation:glow 2.8s ease-in-out infinite;}
+
+/* 골드 글씨: 은은하게 빛이 한 번씩 지나감 */
+.eyebrow,.names em,.closing .sig,.kicker{
+  background:linear-gradient(100deg,var(--gold-lo) 0%,var(--sage) 30%,var(--gold-hi) 48%,var(--sage) 62%,var(--gold-lo) 100%);
+  background-size:260% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:sheen 5.5s ease-in-out infinite;}
+.names{background:linear-gradient(100deg,var(--ink) 0%,var(--ink) 42%,var(--gold-hi) 50%,var(--ink) 58%,var(--ink) 100%);
+  background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:sweep 7s ease-in-out infinite;}
+.names em{animation-delay:.6s;}
+@keyframes sheen{0%,100%{background-position:100% 0;}50%{background-position:0 0;}}
+@keyframes sweep{0%{background-position:100% 0;}35%,100%{background-position:0 0;}}
+@keyframes glow{0%,100%{filter:brightness(1);}50%{filter:brightness(1.35);}}
+
+/* 반짝이 레이어 */
+.glitter{position:absolute;inset:0;z-index:25;pointer-events:none;overflow:hidden;}
+.sp{position:absolute;width:var(--s);height:var(--s);margin:calc(var(--s)/-2) 0 0 calc(var(--s)/-2);
+  opacity:0;animation:twinkle var(--d) ease-in-out var(--w) infinite;}
+.sp::before,.sp::after{content:"";position:absolute;left:50%;top:50%;border-radius:50%;
+  background:radial-gradient(closest-side,#fff,rgba(247,233,193,.9) 35%,rgba(210,182,121,0));}
+.sp::before{width:100%;height:14%;transform:translate(-50%,-50%);}
+.sp::after{width:14%;height:100%;transform:translate(-50%,-50%);}
+.sp i{position:absolute;left:50%;top:50%;width:34%;height:34%;transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(closest-side,#fff,rgba(247,233,193,.5) 50%,transparent);}
+@keyframes twinkle{0%,100%{opacity:0;transform:scale(.2) rotate(0deg);}
+  45%{opacity:1;transform:scale(1) rotate(45deg);}60%{opacity:.85;transform:scale(.8) rotate(60deg);}}
+
+@media (prefers-reduced-motion:reduce){.glitter{display:none;}
+  .eyebrow,.names,.names em,.closing .sig,.kicker{background-position:50% 0;}}
 </style>
 </head>
 <body>
@@ -480,6 +555,28 @@ function bgmAuto(e){if(bgmTried)return;
   bgmPlay();}
 ['pointerdown','touchstart','keydown'].forEach(ev=>
   document.addEventListener(ev,bgmAuto,{passive:true}));
+</script>
+<script id="navy-glitter">
+(function(){
+  var frame=document.querySelector('.frame'); if(!frame) return;
+  var layer=document.createElement('div'); layer.className='glitter'; layer.setAttribute('aria-hidden','true');
+  var N=16;
+  function place(el){
+    /* 가운데 글 영역은 덜 가리도록 가장자리 쪽에 더 자주 배치 */
+    var x=Math.random()<.65?(Math.random()<.5?4+Math.random()*22:74+Math.random()*22):10+Math.random()*80;
+    el.style.left=x+'%'; el.style.top=(5+Math.random()*88)+'%';
+    el.style.setProperty('--s',(7+Math.random()*11).toFixed(1)+'px');
+  }
+  for(var i=0;i<N;i++){
+    var s=document.createElement('span'); s.className='sp'; s.appendChild(document.createElement('i'));
+    place(s);
+    s.style.setProperty('--d',(2.6+Math.random()*2.8).toFixed(2)+'s');
+    s.style.setProperty('--w',(-Math.random()*5).toFixed(2)+'s');
+    s.addEventListener('animationiteration',function(e){place(e.currentTarget);});
+    layer.appendChild(s);
+  }
+  frame.appendChild(layer);
+})();
 </script>
 </body>
 </html>
