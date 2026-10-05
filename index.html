@@ -136,12 +136,12 @@ body{background:#EFE9DE;color:var(--ink);font-family:var(--body);
 .give-foot{font-size:12.5px;color:var(--soft);line-height:1.9;text-align:center;margin-top:24px;}
 
 /* closing */
-.closing .inner{padding:0;justify-content:center;}
-.closing .pic{position:relative;width:100%;flex:0 0 auto;}
-.closing .pic img{width:100%;display:block;}
-.closing .pic::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:32%;
+.closing .inner{padding:0;justify-content:flex-start;}
+.closing .pic{position:relative;width:100%;height:60vh;height:60svh;min-height:340px;flex:0 0 auto;}
+.closing .pic img{width:100%;height:100%;object-fit:cover;object-position:50% 80%;display:block;}
+.closing .pic::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:46%;
   background:linear-gradient(180deg,rgba(252,249,244,0),var(--paper) 94%);}
-.closing .cap{position:relative;z-index:2;text-align:center;padding:8px 30px 62px;margin-top:-18px;}
+.closing .cap{position:relative;z-index:2;text-align:center;padding:8px 30px 62px;margin-top:-34px;}
 .closing .q{font-family:var(--display);font-size:16px;line-height:2.2;color:#3B372F;}
 .closing .sig{font-family:var(--latin);font-style:italic;font-size:27px;color:var(--sage);margin-top:22px;}
 .closing .date{font-family:var(--latin);font-size:12px;letter-spacing:.3em;color:var(--soft);margin-top:12px;}
@@ -219,7 +219,7 @@ body{background:var(--night);}
 .card.tinted{background-color:var(--paper2);}
 
 .cover .photo::after{background:linear-gradient(180deg,rgba(14,26,48,0),rgba(14,26,48,.93) 62%,var(--paper) 100%);}
-.closing .pic::after{background:linear-gradient(180deg,rgba(14,26,48,0),var(--paper) 94%);}
+.closing .pic::after{background:linear-gradient(180deg,rgba(14,26,48,0) 0%,rgba(14,26,48,.28) 30%,rgba(14,26,48,.7) 62%,rgba(14,26,48,.93) 84%,var(--paper) 100%);}
 
 .invite p,.closing .q{color:#DCD5C6;}
 .detail dd,.acc-num{color:var(--ink);}
@@ -397,7 +397,7 @@ body{background:var(--night);}
 
     <section class="card closing">
       <div class="inner">
-        <div class="pic"><img src="img/DS_05123-s.jpg" srcset="img/DS_05123-s.jpg 1000w, img/DS_05123-l.jpg 2000w" sizes="(max-width:430px) 100vw, 430px" alt=""></div>
+        <div class="pic"><img src="img/DS_05123-tall-s.jpg" srcset="img/DS_05123-tall-s.jpg 860w, img/DS_05123-tall-l.jpg 1290w" sizes="(max-width:430px) 100vw, 430px" alt=""></div>
         <div class="cap">
           <p class="q anim">오시는 걸음이<br>저희에겐 가장 큰 선물입니다.</p>
           <div class="sig anim d1">Thank you</div>
